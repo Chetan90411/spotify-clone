@@ -7,7 +7,10 @@
   font-family: 'Roboto', sans-serif;
 }
 
-
+body {
+    background-color: #000;
+    color: #fff;
+}
 
 
 .left {
@@ -44,7 +47,8 @@
 }
 
 .library {
-    min-height: 50vh;
+    min-height: 80vh;
+    position: relative;
 }
 
 .footer {
@@ -52,8 +56,19 @@
     color: grey;
     gap: 13px;
     flex-wrap: wrap;
+    position: absolute;
+    bottom: 0;
 }
 
 .footer a {
     color: grey;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+header > * {
+    padding: 20px;
 }
