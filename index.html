@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Spotify</title>
+  <title>Spotify - Web Player: Music for everyone</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="utility.css" />
 </head>
@@ -72,22 +72,38 @@
           </svg>
         </div>
         <div class="buttons">
-          <button>Sig up</button>
-          <button>Log in</button>
+          <button class="signupbtn">Sign up</button>
+          <button class="loginbtn">Log in</button>
         </div>
       </div>
       <div class="spotifyPlaylists">
         <h1>Spotify Playlists</h1>
-         <div class="cardContainer flex">
+        <div class="cardContainer flex">
           <div class="card rounded">
+            <div class="play">
+              <svg width="38" height="38" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Circle Background -->
+                <circle cx="40" cy="40" r="40" fill="#1ed760" />
+
+                <!-- Play Button -->
+                <path d="M30 50V30L50 40L30 50Z" fill="#141B34" />
+              </svg>
+            </div>
+
             <img class="rounded" src="https://i.scdn.co/image/ab67706f00000002b55b6074da1d43715fc16d6d" alt="">
             <h2>Happy Hits</h2>
             <p>Hits to boost your mood and fill you with happiness!</p>
           </div>
-         </div>
+        </div>
+
+        <div class="playbar">
+          playbar
+        </div>
       </div>
     </div>
   </div>
+
+  <script src="script.js"></script>
 </body>
 
 </html>

@@ -64,6 +64,7 @@ body {
     flex-wrap: wrap;
     position: absolute;
     bottom: 0;
+    padding: 0.8rem;
 }
 
 .footer a {
@@ -83,18 +84,22 @@ header > * {
 
 .spotifyPlaylists {
     padding: 16px;
+    max-height: 80vh;
+    overflow-y: scroll;
 }
 
 .cardContainer {
     gap: 10px;
     flex-wrap: wrap;
     margin: 30px;
+
 }
 
 .card {
     width: 200px;
     background-color: #171717;
     padding: 0.8rem;
+    position: relative;
 }
 
 .card:hover {
@@ -108,4 +113,48 @@ header > * {
 .card img {
     width: 100%;
     object-fit: contain;
+}
+
+.play {
+    position: absolute;
+    right: 1.2rem;
+    top: 13rem;
+    opacity: 0;
+    transition: all 1s ease-out;
+}
+
+.buttons > *{
+    margin: 0px 0.8rem;
+}
+button {
+    cursor: pointer;
+}
+
+/* sign-up and login buttons */
+
+.signupbtn {
+    background-color: #101010;
+    color: grey;
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+}
+
+.signupbtn:hover {
+    font-size: 1.1rem;
+    color: white;
+}
+
+.loginbtn {
+    background-color: white;
+    border-radius: 23px;
+    color: black;
+    padding: 0.8rem 2rem;
+    border: none;
+    outline: none;
+}
+.loginbtn:hover {
+    font-weight: bold;
+    padding: 0.8rem 2.1rem;
 }
