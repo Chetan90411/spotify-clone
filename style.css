@@ -22,6 +22,7 @@ body {
     width: 75vw;
     margin: 7px 0;
     background-color: #1f1f1f;
+    position: relative;
 }
 
 
@@ -157,4 +158,13 @@ button {
 .loginbtn:hover {
     font-weight: bold;
     padding: 0.8rem 2.1rem;
+}
+
+/* Playbar */
+.playbar {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    background-color: green;
+    padding: 12px;
 }
