@@ -1,170 +1,180 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
-    background-color: #000;
-    color: #fff;
+  background-color: #000;
+  color: #fff;
 }
 
-
-
 .left {
-    width: 25vw;
+  width: 25vw;
 }
 
 .right {
-    width: 75vw;
-    margin: 7px 0;
-    background-color: #1f1f1f;
-    position: relative;
+  width: 75vw;
+  margin: 7px 0;
+  background-color: #1f1f1f;
+  position: relative;
 }
 
-
 .home ul li {
-    display: flex;
-    gap: 15px;
-    width: 14px;
-    list-style: none;
-    padding-top: 14px;
-    font-weight: bold;
+  display: flex;
+  gap: 15px;
+  width: 14px;
+  list-style: none;
+  padding-top: 14px;
+  font-weight: bold;
 }
 
 .heading {
-    display: flex;
-    gap: 15px;
-    width: 100%;
-    padding-top: 14px;
-    padding: 8px 16px;
-    font-weight: bold;
-    align-items: center;
+  display: flex;
+  gap: 15px;
+  width: 100%;
+  padding-top: 14px;
+  padding: 8px 16px;
+  font-weight: bold;
+  align-items: center;
 }
 
 .heading h2 {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 .heading img {
-    width: 30px;
+  width: 30px;
 }
 
 .library {
-    min-height: 80vh;
-    position: relative;
+  min-height: 80vh;
+  position: relative;
 }
 
 .footer {
-    font-size: 10px;
-    color: grey;
-    gap: 13px;
-    flex-wrap: wrap;
-    position: absolute;
-    bottom: 0;
-    padding: 0.8rem;
+  font-size: 10px;
+  color: grey;
+  gap: 13px;
+  flex-wrap: wrap;
+  position: absolute;
+  bottom: 0;
+  padding: 0.8rem;
 }
 
 .footer a {
-    color: grey;
+  color: grey;
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    background-color: #101010;
-    padding-top: 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: #101010;
+  padding-top: 0;
 }
 
 header > * {
-    padding: 20px;
+  padding: 20px;
 }
 
 .spotifyPlaylists {
-    padding: 16px;
-    max-height: 80vh;
-    overflow-y: scroll;
+  padding: 16px;
+  max-height: 80vh;
+  overflow-y: scroll;
 }
 
 .cardContainer {
-    gap: 10px;
-    flex-wrap: wrap;
-    margin: 30px;
-
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 30px;
 }
 
 .card {
-    width: 200px;
-    background-color: #171717;
-    padding: 0.8rem;
-    position: relative;
+  width: 200px;
+  background-color: #171717;
+  padding: 0.8rem;
+  position: relative;
 }
 
 .card:hover {
-    background-color: #262626;
+  background-color: #262626;
 }
 
 .card > * {
-    padding-top: 3px;
+  padding-top: 3px;
 }
 
 .card img {
-    width: 100%;
-    object-fit: contain;
+  width: 100%;
+  object-fit: contain;
 }
 
 .play {
-    position: absolute;
-    right: 1.2rem;
-    top: 13rem;
-    opacity: 0;
-    transition: all 1s ease-out;
+  position: absolute;
+  right: 1.2rem;
+  top: 13rem;
+  opacity: 0;
+  transition: all 1s ease-out;
 }
 
-.buttons > *{
-    margin: 0px 0.8rem;
+.buttons > * {
+  margin: 0px 0.8rem;
 }
 button {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 /* sign-up and login buttons */
 
 .signupbtn {
-    background-color: #101010;
-    color: grey;
-    font-weight: bold;
-    font-size: 1rem;
-    border: none;
-    outline: none;
+  background-color: #101010;
+  color: grey;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  outline: none;
 }
 
 .signupbtn:hover {
-    font-size: 1.1rem;
-    color: white;
+  font-size: 1.1rem;
+  color: white;
 }
 
 .loginbtn {
-    background-color: white;
-    border-radius: 23px;
-    color: black;
-    padding: 0.8rem 2rem;
-    border: none;
-    outline: none;
+  background-color: white;
+  border-radius: 23px;
+  color: black;
+  padding: 0.8rem 2rem;
+  border: none;
+  outline: none;
 }
 .loginbtn:hover {
-    font-weight: bold;
-    padding: 0.8rem 2.1rem;
+  font-weight: bold;
+  padding: 0.8rem 2.1rem;
 }
 
 /* Playbar */
 .playbar {
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-    background-color: green;
-    padding: 12px;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  background-color: rgb(234, 242, 234);
+  padding: 12px;
+}
+
+.songbuttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.songList ul {
+  padding: 0 42px;
+}
+
+.songList ul li {
+  list-style-type: decimal;
 }
