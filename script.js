@@ -15,16 +15,25 @@ async function getSongs() {
 }
 
 async function main() {
+  // Get List of all the Songs
   let songs = await getSongs();
   console.log(songs);
-
+  // Show all the songs in the playlist
   let songUL = document.querySelector(".songList").getElementsByTagName('ul')[0]
   for (const song of songs) {
-    songUL.innerHTML = songUL.innerHTML + `<li>${song.replaceAll('%20', ' ')}</li>`;
+    songUL.innerHTML = songUL.innerHTML + `<li>
+              <img class="invert" src="music.svg" alt="">
+              <div class="info">
+                <div>${song.replaceAll('%20', ' ')}</div>
+                <div>Chetan</div>
+              </div>
+              <div class="playnow">
+                <span>Play Now</span>
+                <img class="invert" src="play.svg" alt="">
+              </div>
+    </li>`;
   }
 
-  var audio = new Audio(songs[0]);
-  audio.play();
 }
 
 main();

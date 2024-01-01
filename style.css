@@ -136,6 +136,7 @@ button {
   font-size: 1rem;
   border: none;
   outline: none;
+  transition: all 0.1s ease-in;
 }
 
 .signupbtn:hover {
@@ -150,19 +151,25 @@ button {
   padding: 0.8rem 2rem;
   border: none;
   outline: none;
+  font-size: 1rem;
+  transition: all 0.1s ease-in;
 }
 .loginbtn:hover {
   font-weight: bold;
-  padding: 0.8rem 2.1rem;
+  font-size: 1.1rem;
+  /* padding: 0.8rem 2.1rem; */
 }
 
 /* Playbar */
 .playbar {
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
-  background-color: rgb(234, 242, 234);
+  position: fixed;
+  bottom: 30px;
+  width: 70vw;
+  filter: invert(1);
+  background: #dad5d5;
+  border-radius: 30px;
   padding: 12px;
+  height: 60px;
 }
 
 .songbuttons {
@@ -171,10 +178,60 @@ button {
   gap: 1rem;
 }
 
+.songList {
+  height: 544px;
+  overflow: auto;
+  margin-bottom: 44px;
+}
+
 .songList ul {
-  padding: 0 42px;
+  padding: 0 0.8rem;
 }
 
 .songList ul li {
   list-style-type: decimal;
+  border: 2px solid white;
+  gap: 12px;
+  display: flex;
+  cursor: pointer;
+  padding: 12px;
+  margin: 12px 0;
+  border-radius: 5px;
+  justify-content: space-between;
+}
+
+.songList .info {
+  width: 344px;
+  font-size: 14px;
+}
+
+.playnow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.playnow span {
+    display: inline-block;
+    font-size: 15px;
+    width: 70px;
+}
+
+.seekbar {
+  height: 2px;
+  width: 98%;
+  border: 2px solid black;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 0px;
+}
+
+.circle {
+  height: 13px;
+  width: 13px;
+  border-radius: 50%;
+  background-color: black;
+  position: relative;
+  bottom: 6px;
+  left: 0%;
 }
