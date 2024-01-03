@@ -222,7 +222,9 @@ button {
 }
 
 .seekbar {
-  height: 2px;
+  cursor: pointer;
+  height: 4px;
+  border: none;
   width: 98%;
   background: black;
   border-radius: 10px;

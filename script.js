@@ -1,8 +1,13 @@
 let currentSong = new Audio();
 
 function secondsToMinutesAndSeconds(seconds) {
-  minutes = parseInt(seconds / 60);
+  let minutes = parseInt(seconds / 60);
   seconds = parseInt(seconds % 60);
+
+  if(minutes === NaN || seconds === NaN){
+    minutes = 0;
+    seconds = 0;
+  }
 
   return `${(minutes > 9) ? minutes : "0" + minutes}:${(seconds > 9) ? seconds : "0" + seconds}`;
 }
@@ -84,6 +89,14 @@ async function main() {
   currentSong.addEventListener('timeupdate', () => {
     console.log(currentSong.currentTime, secondsToMinutesAndSeconds(currentSong.duration))
     document.querySelector('.songtime').innerHTML = `${secondsToMinutesAndSeconds(currentSong.currentTime)}/${secondsToMinutesAndSeconds(currentSong.duration)}`
+    document.querySelector(".circle").style.left = (currentSong.currentTime / currentSong.duration) * 100 + "%";
+  })
+
+  // Add an event listener to the seekbar
+  document.querySelector(".seekbar").addEventListener("click", (e) => {
+    let percent = (e.offsetX / e.target.getBoundingClientRect().width) * 100;
+    document.querySelector('.circle').style.left = percent + "%";
+    currentSong.currentTime = ((currentSong.duration) * percent) / 100;
   })
 }
 
