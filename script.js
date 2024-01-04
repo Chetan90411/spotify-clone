@@ -28,7 +28,7 @@ async function getSongs() {
   return songs;
 }
 
-const playMusic = (track, pause = "false") => {
+const playMusic = (track, pause = false) => {
   // let audio = new Audio("/songs/" + track);
   currentSong.src = "/songs/" + track;
   if(!pause) {
@@ -68,7 +68,7 @@ async function main() {
   Array.from(
     document.querySelector(".songList").getElementsByTagName("li")
   ).forEach((e) => {
-    e.addEventListener("click", (element) => {
+    e.addEventListener("click", () => {
       console.log(e.querySelector(".info").firstElementChild.innerHTML);
       playMusic(e.querySelector(".info").firstElementChild.innerHTML.trim());
     });
@@ -97,6 +97,16 @@ async function main() {
     let percent = (e.offsetX / e.target.getBoundingClientRect().width) * 100;
     document.querySelector('.circle').style.left = percent + "%";
     currentSong.currentTime = ((currentSong.duration) * percent) / 100;
+  })
+
+  // Add an event listener for hamburger
+  document.querySelector(".hamburger").addEventListener("click", () => {
+    document.querySelector(".left").style.left = "0%";
+  })
+  
+  // Add an event listener for close 
+  document.querySelector(".close").addEventListener("click", () => {
+    document.querySelector(".left").style.left = "-110%";
   })
 }
 
