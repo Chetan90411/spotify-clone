@@ -361,11 +361,11 @@ button {
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 500px) {
   .card {
-    width: 84vw;
+    width: auto;
   }
   .cardContainer{
-    max-height: 50vh;
+    max-height: 55vh;
   }
 }

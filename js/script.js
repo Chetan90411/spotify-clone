@@ -27,12 +27,7 @@ async function getSongs(folder) {
     const element = as[index];
     if (element.href.endsWith(".mp3")) {
       songs.push(element.href.split(`/${folder}/`)[1]);
-      console.log(element.href.split(`/${folder}/`)[1])
     }
-  }
-
-  for(let song of songs) {
-    console.log(song)
   }
 
   // Show all the songs in the playlist
